@@ -1,0 +1,883 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-image: url(../img/athletebackdrop.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.container {
+	background-image: url(../img/rectangle.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 100vh;
+	padding-top: 50px;
+}
+
+.newUserContainer {
+	text-align: center;
+	background-color: rgba(255, 98, 4, 0.8700000047683716);
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+}
+
+.avatarRadioGroup {
+	padding-top: 1%;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 0.5fr 1.5fr 0.5fr 4fr 0.5fr;
+	grid-template-rows: 0.1fr 0.1fr 0.1fr auto 0.1fr;
+	grid-template-areas: ". . . . ." ". . . start-workout ." ". . . . ."
+		". member . member-analytics .";
+	background-color: rgba(255, 98, 4, 0.8700000047683716);
+	height: 90%;
+	width: 70%;
+	margin-left: 15%;
+	height: 100vh;
+	/* 	margin-left: 10%;
+	margin-top: 3%; */
+}
+
+.member {
+	display: flex;
+	padding-top: 5%;
+	flex-direction: column;
+	grid-area: member;
+	/* 	background-color: rgba(220, 220, 220, 0.90); */
+}
+
+.avatar {
+	grid-area: avatar;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(220, 220, 220, 0.60);
+	border-radius: 10px;
+}
+
+.member-Links {
+	grid-area: member-links;
+	text-align: center;
+	/* border-bottom: 2px solid black;
+	border-bottom-width: thin; */
+}
+
+.member-Links p{
+	/* color: #FF6204; */
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 22px;
+	padding-bottom: 10px;	
+	border-bottom: 1px solid rgba(220, 220, 220, 0.80);
+}
+
+.admin-buttons a, .calendar-button a, .edit-profile-button a {
+	background: rgba(255, 255, 255, 0.90);
+	font-weight: bold;
+	text-align: center;
+	color: #FF6204;
+	font-size: 12px;
+	padding: 5px 20px;
+	border-radius: 8px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.admin-buttons {
+	grid-area: admin-buttons;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.start-workout {
+	grid-area: start-workout;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit-profile-button {
+	grid-area: edit-profile-button;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.calendar-button {
+	grid-area: calendar-button;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.member-analytics {
+	grid-area: member-analytics;
+}
+
+.login-header {
+	display: flex;
+	padding-top: 5%;
+	padding-left: 5%;
+}
+
+.navigation {
+	float: right;
+	margin-right: 25px;
+}
+
+.navigation li {
+	list-style-type: none;
+	word-spacing: 10px;
+}
+
+.navigation a {
+	color: #FF6204;
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1.28px;
+	line-height: 22px;
+	text-decoration: none;
+}
+
+.workout-companion-header {
+	float: center;
+	text-align: center;
+	padding-left: 45%;
+}
+
+.tabcontent table {
+	text-align: center;
+	font-size: 12px;
+	border: 2px solid rgba(220, 220, 220, 0.90);
+}
+
+.tabcontent table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.tabcontent table tr:hover {
+	background-color: #FC9E65;
+}
+
+.signup {
+	padding-left: 30%;
+}
+
+.create-member th {
+	text-align: right;
+}
+
+.btn-signup {
+	margin-top: 2%;
+	margin-left: 40%;
+}
+
+.gym-log {
+	background-color: rgba(255, 98, 4, 0.8700000047683716);
+	height: 90%;
+	width: 70%;
+	margin-left: 15%;
+	align-content: center;
+}
+
+.session {
+	display: flex;
+	padding: 3% 5% 5% 5%;
+	border-bottom: 2px solid black;
+}
+
+.session-machine {
+	padding: 5% 5% 5% 5%;
+}
+
+.equipment-description {
+	text-align: center;
+}
+
+.machine-name-muscle {
+	font-size: 20px;
+}
+
+.per-session {
+	padding: 5% 5% 5% 25%;
+}
+
+.session iframe {
+	padding-top: 4%;
+}
+
+.login {
+	position: absoulte;
+}
+
+.synergyLogo>img {
+	margin-left: 100px;
+	height: 90px;
+	width: 75px;
+}
+
+.userNameInput {
+	width: 100%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/userName.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin: 15px;
+}
+
+.passwordInput {
+	width: 100%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 16px;
+	background: transparent;
+	background-image: url(../img/password.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin: 15px;
+}
+
+.add-session-button {
+	background: white;
+	font-weight: bold;
+	color: #FF6204;
+	font-size: 10px;
+	padding: 5px 15px;
+	border-radius: 10px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin-right: 40%;
+	margin-left: 40%;
+}
+
+.session-call-to-action {
+	display: flex;
+	padding-top: 2%;
+	align-items: center;
+	justify-content: center;
+}
+
+.end-session-button, .session-start-button {
+	background: rgba(0, 0, 0, 0.90);
+	font-weight: bold;
+	text-align: center;
+	color: #FF6204;
+	font-size: 20px;
+	padding: 10px 50px;
+	border-radius: 8px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.loginSubmitBTN {
+	background-color: white;
+	text-align: center;
+	color: #FF6204;
+	font-size: 20px;
+	padding: 8px 40px;
+	border-radius: 20px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin: 25px;
+	margin-left: 75px;
+}
+
+.set-table {
+	width: 80%;
+	box-sizing: border-box;
+	border-bottom: 2px solid #ccc;
+	border-radius: 2px;
+	font-size: 10px;
+	background-color: white;
+	padding: 8px 16px 8px 36px;
+}
+
+.loginSubmitBTN:hover, .add-session-button:hover, .admin-buttons a:hover, .calendar-button a:hover, .edit-profile-button a:hover {
+	background-color: #FF6204;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.end-session-button:hover, .session-start-button:hover {
+	background-color: white;
+	color: #FF6204;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.classSignInButton {
+	background-color: white;
+	text-align: center;
+	color: #FF6204;
+	font-size: 15px;
+	padding: 8px 20px;
+	border-radius: 20px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin: 0px;
+	margin-left: -20px;
+	margin-top: -5px;
+}
+
+.classSignInButton:hover {
+	background-color: #FF6204;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+a:-webkit-any-link {
+	text-decoration: none;
+	color: black;
+}
+
+color
+
+
+
+
+<<<<<<< HEAD
+:
+
+
+ 
+
+
+=======
+
+
+
+
+
+
+
+
+
+
+:
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+>>>>>>> 96d46e8041c4dbc352e1474f8c58430a2dd5e239
+#FF6204
+
+
+
+
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 96d46e8041c4dbc352e1474f8c58430a2dd5e239
+;
+}
+a:-webkit-any-link:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.header {
+	background-color: transparent;
+	position: fixed;
+	width: 20%;
+}
+
+.header ul {
+	margin: 3%;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+.header li a {
+	display: block;
+	padding-top: 38px;
+	padding-left: 5%;
+	text-decoration: none;
+	color: white;
+}
+
+.header .logo {
+	display: block;
+	float: left;
+	font-size: 2em;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 25px;
+	position: fixed;
+	user-select: none;
+}
+
+.header .menu-icon .navicon {
+	background: white;
+	display: block;
+	height: 2px;
+	position: fixed;
+	transition: background .2s ease-out;
+	width: 30px;
+}
+
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+	background: white;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+	top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+	top: -5px;
+}
+
+.header .menu-btn {
+	display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-20deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(20deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not (.steps ) .navicon:before,
+	.header .menu-btn:checked ~ .menu-icon:not (.steps ) .navicon:after {
+	top: 0;
+}
+
+.loginSignInBTN {
+	background-color: white;
+	text-align: center;
+	color: #FF6204;
+	font-size: 20px;
+	padding: 8px 40px;
+	border-radius: 20px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin: 25px;
+}
+
+.editProfileButton {
+	background-color: white;
+	text-align: center;
+	color: #FF6204;
+	font-size: 20px;
+	border-radius: 20px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.loginSignInBTN:hover, .add-session-button:hover, .editProfileButton:hover
+	{
+	background-color: #FF6204;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.loginHeaderGroup {
+position: absolute;
+ left: 45%; 
+ top: 36%; 
+	color : white;
+	text-align: center;
+	color: white;
+}
+
+.stonesEndorsment {
+	position: absolute;
+	left: 70%;
+	top: 80%;
+	color: white;
+	text-align: center;
+}
+
+.login {
+	position: absolute;
+	left: 7%;
+	top: 25%;
+}
+
+.createNewUserBTN {
+	background-color: white;
+	text-align: center;
+	color: #FF6204;
+	font-size: 20px;
+	padding: 8px 40px;
+	border-radius: 20px;
+	border: none;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	margin-top: 2%;
+}
+
+.createNewUserBTN:hover, .add-session-button:hover {
+	background-color: #FF6204;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.newUserNameInput {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/name.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+	box-sizing: border-box;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.newUserPassword {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/password.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+.newUserConfirmPassword {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/confirmPassword.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+.newUserName {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/userName.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+.newUserEmail {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/email.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+.newUserWorkoutGoals {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/goal.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+.newUserWorkoutProfile {
+	width: 45%;
+	box-sizing: border-box;
+	border-bottom: 2px solid white;
+	border-radius: 2px;
+	font-size: 14px;
+	background-color: transparent;
+	background-image: url(../img/profile.png);
+	background-size: 25px;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	border-right: transparent;
+	border-left: transparent;
+	border-top: transparent;
+	margin-top: 2%;
+}
+
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: rgba(220, 220, 220, 0.90);
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #FC9E65;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #FC9E65;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+	background-color: rgba(220, 220, 220, 0.90);
+}
+
+.member-analytics table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.member-analytics th {
+	background-color: #FC9E65;
+	color: black;
+}
+
+.backToDashboardFromCalendar {
+	float: right;
+	margin: top;
+	margin-top: 20px;
+	margin-right: 15px;
+}
+
+.avatarRadioGroup>img {
+	height: 7%;
+	width: 7%;
+}
+
+.newUserSignUpHeaders {
+	color: white;
+}
+
+#mainselection select {
+	border: 0;
+	color: #EEE;
+	background: transparent;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 2px 10px;
+	*background: white;
+	-webkit-appearance: none;
+	margin-top: 2%;
+}
+
+#mainselection {
+	overflow: hidden;
+	-moz-border-radius: 9px 9px 9px 9px;
+	-webkit-border-radius: 9px 9px 9px 9px;
+	border-radius: 9px 9px 9px 9px;
+	box-shadow: 1px 1px 11px #330033;
+	background: #58B14C url("http://i62.tinypic.com/15xvbd5.png") no-repeat
+		scroll 319px center;
+}
+
+select#soflow-color {
+	-webkit-appearance: button;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-user-select: none;
+	background-image: url(http://i62.tinypic.com/15xvbd5.png),
+		-webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	border: 1px solid #AAA;
+	color: #555;
+	font-size: inherit;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 350px;
+}
+
+select#soflow-color {
+	color: #FF6204;
+	background-image: url(http://i62.tinypic.com/15xvbd5.png),
+		-webkit-linear-gradient(white, white 40%, white);
+	background-color: white;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.avatarRadioGroup>img {
+	height: 7%;
+	width: 7%;
+	margin-top: 2%;
+}
+
+.newUserSignUpHeaders {
+	color: white;
+}
+
+.create-member {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.footer {
+	color: white;
+}
+.synergyLogoEP > img{
+margin-left: auto; 
+margin-right: auto;  
+  }
+  
+  .editProfileButton {
+  margin-top: 2%
+  }
+
